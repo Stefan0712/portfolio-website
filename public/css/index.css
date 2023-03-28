@@ -33,10 +33,11 @@
     background-image: url('../images/light.png');
     background-position: center;
     background-size: 80%;
+    background-repeat: no-repeat;
 }
 #darkModeBtn{
     background-color: white;
-    width: 36px;
+    width: 40px;
     height: 25px;
     border-radius: 20px;
     display: flex;
@@ -50,6 +51,9 @@
     transform: translateX(+50%);
     transition: all 0.3s;
     background-image: url('../images/dark.png') !important; 
+    background-position: center;
+    background-size: 20%;
+    background-repeat: no-repeat;
 }
 .lightHomeBtn:hover{
     filter: invert(100%);

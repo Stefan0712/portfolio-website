@@ -199,23 +199,14 @@ body{
 }
 
 .section{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-}
-#about{
-    background-color: #24272c;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    overflow: hidden;
-    position: relative;
-    align-items: center;
 }
 #about .go-to-top, #portfolio .go-to-top{
     width: 80%;
     left: 10%;
     bottom: 30px;
+    
 }
 
 .title{
@@ -266,6 +257,17 @@ body{
 }
 .go-back a:hover{
     text-decoration: underline;
+}
+
+#about{
+    background-color: #24272c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
 }
 .about-content{
     width: 80%;
@@ -352,7 +354,6 @@ body{
 .skill-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     gap: 20px;
     padding: 20px;
     background-color: #1a1d22;
@@ -389,40 +390,13 @@ body{
     border-radius: 50px;
     background-color: white;
 }
-#go-to-portfolio-btn{
-    position: absolute;
-    right: 150px;
-    bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    font-size: 1.2rem;
-}
-#go-to-portfolio-btn{
-    color: white;
-    text-decoration: none;
-    animation: pulse 10s infinite;
-}
-#go-to-portfolio-btn img{
-    width: 50px;
-    height: 50px;
-}
-@keyframes pulse {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(20px);
-    }
-}
+
 
 
 #portfolio{
     position: relative;
     display: flex;
     justify-content: center;
-    
 }
 
 .portfolio-content{
@@ -440,20 +414,23 @@ body{
     gap: 20px;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 75%;
     text-align: center;
     margin: 30px 0px 50px 0px;
 }
 .portfolio-projects{
     height: 80%;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
 }
+.portfolio-projects::-webkit-scrollbar{
+    visibility: hidden;
+}
 .project-container{
-    width: 30%;
+    max-width: 30%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -466,13 +443,16 @@ body{
     position: absolute;
     bottom: 0px;
     left: 0px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     transform: translateY(100%);
     transition: all 0.3s;
     padding: 0px 15px 15px 15px;
+    font-size: auto;
 
+}
+.project-details::-webkit-scrollbar{
+    visibility: hidden;
 }
 .project-details a{
     color: #df3843;

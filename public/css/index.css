@@ -51,6 +51,9 @@
     transition: all 0.3s;
     background-image: url('../images/dark.png') !important; 
 }
+.lightHomeBtn:hover{
+    filter: invert(100%);
+}
 html{
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
@@ -110,15 +113,16 @@ nav{
     color: var(--homeBtnText);
     text-decoration: none;
     font-size: 1.3rem;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     margin-left: auto;
     margin-right: 100px;
     transition: all 0.2s;
 }
 #nav-contact-btn:hover{
-    background-color: rgba(255, 255, 255, 0.137);
     transition: all 0.2s;
+    border: 1px solid lightgray;
+    
 }
 
 body{
@@ -174,8 +178,7 @@ body{
     transition: all 0.2s;
 }
 .contact-btn:hover{
-    border: 1px solid gray;
-    background-color: rgba(255, 255, 255, 0.137);
+    border: 1px solid lightgray;
     transition: all 0.2s;
 }
 .home-btns{
@@ -199,7 +202,7 @@ body{
     transition: all 0.2s;
 }
 #find-more-btn:hover{
-    border: 1px solid #1a1617;
+    border: 1px solid lightgray;
     transition: all 0.2s;;
     background-color: #fde396;
 }

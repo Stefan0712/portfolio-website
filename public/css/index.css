@@ -7,6 +7,9 @@
 html{
     scroll-behavior: smooth;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 nav{
     width: 100vw;
     height: 75px;
@@ -630,19 +633,25 @@ body{
 
 
 footer{
-    height: auto;
+    height: 75px;
     width: 100vw;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
     color: white;
+    font-size: 0.8rem;
+}
+footer .copyright{
+    margin-right: calc(50vw - 100px);
 }
 .attribute-links{
-    padding: 20px;
-    
+    margin-left: 100px;
+    margin-right: auto;
+
 }
 .attribute-links li{
     list-style: none;
+    
     
 
 }
@@ -650,6 +659,7 @@ footer{
     text-decoration: none;
     color: gray;
     border-bottom: 1px solid transparent;
+    
 }
 .attribute-links a:hover{
     color: lightgray;

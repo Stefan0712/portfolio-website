@@ -496,7 +496,7 @@ body{
     visibility: hidden;
 }
 .project-container{
-    max-width: 30%;
+    width: 30%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -504,6 +504,14 @@ body{
     position: relative;
     cursor: pointer;
     
+}
+.mobile-desc{
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+    background-color: #24272c79;
+    font-size: 0.8rem;
+    visibility: hidden;
 }
 .project-details{
     position: absolute;
@@ -727,4 +735,155 @@ footer .copyright{
 .attribute-links a:hover{
     color: lightgray;
     border-bottom: 1px solid lightgray;
+}
+#menu-btn{
+    height: 40px;
+    width: 50px;
+    margin-right: 25px;
+    margin-left: auto;
+    visibility: hidden;
+}
+#menu-btn img{
+    height: 100%;
+    width: 100%;
+}
+.show-menu{
+    transform: translateY(0%) !important;
+    transition: all 0.3s;
+}
+@media only screen and (max-width: 600px) {
+  
+    nav{
+        background-color: var(--primary);
+        position: relative;
+        top: 0px;
+        z-index: 4;
+    }
+    #nav-contact-btn{
+        display: none;
+    }
+    #menu-btn{
+        visibility: visible;
+    }
+    .nav-links{
+        width: 100%;
+        flex-direction: column;
+        z-index: 3;
+        position: absolute;
+        top: 75px;
+        height: 375px;
+        background-color: var(--secondary);
+        transform: translateY(-120%);
+        transition: all 0.3s;
+    }
+    #home-btn{
+        border-bottom: 1px solid transparent;
+    }
+    .nav-links a{
+        width: 100%;
+        font-size: 2rem;
+    }
+    .nav-links a:hover{
+        border-bottom: 1px solid transparent;
+    }
+
+
+    .welcome-text{
+        width: 60%;
+        margin-top: 20%;
+    }
+    .welcome-content{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .welcome-section{
+        background-image: none;
+        background-position: center;
+        background-size: 80%;
+    }
+    .home-btns{
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+    .home-btns a{
+        width: 80% !important;
+        height: 50px !important;
+    }
+    .about-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .personal-info{
+        width: 80%;
+        border-right: none;
+    }
+    .about-me{
+        width: 90%;
+    }
+    .portfolio-projects{
+        height: 80%;
+        flex-direction: column;
+        margin-bottom: 100px;
+        overflow: auto;
+        align-items: center;
+    }
+    .project-container{
+        width: 95%;
+        background-color: red;
+    }
+    .project-details{
+        display: none;
+    }
+    .mobile-desc{
+        visibility: visible;
+    }
+    .contact-content{
+        flex-direction: column;
+        width: 70%;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+    .contact-form form div{
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact-form form input{
+        margin-top: 0px;
+        height: 50px;
+        border: none;
+        border-bottom: 2px solid var(--accent)
+    }
+    .contact-form form div:hover input{
+        margin-top: 0px;
+        height: 50px;
+        border: none;
+        border-bottom: 2px solid var(--accent)
+    }
+    .contact-form{
+        align-items: center;
+        margin-top: 30px;
+    }
+    .contact-title{
+        display: none;
+    }
+    .contact-socials{
+        margin-bottom: 50px;
+        margin-top: 15px;
+    }
+    .contact-socials a p{
+        display: none;
+    }
+    .contact-socials a{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+
 }

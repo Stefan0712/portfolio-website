@@ -16,7 +16,6 @@ const toggleDarkMode = () =>{
         r.style.setProperty('--el','black')
         r.style.setProperty('--accent','black')
         r.style.setProperty('--homeBtnText','white')
-        logo.classList.toggle('logoLight')
         hero.classList.toggle('heroLight')
         navContact.classList.toggle('lightHomeBtn')
         homeContact.classList.toggle('lightHomeBtn')
@@ -28,11 +27,10 @@ const toggleDarkMode = () =>{
     }else if(mode==='light'){
         btn.classList.toggle('activeDarkModeBtn')
         r.style.setProperty('--primary','#1a1d22')
-        r.style.setProperty('--secondary','#FEFBF3')
+        r.style.setProperty('--secondary','#24272c')
         r.style.setProperty('--el','white')
         r.style.setProperty('--accent','#b82a34')
         r.style.setProperty('--homeBtnText','lightgray')
-        logo.classList.toggle('logoLight')
         hero.classList.toggle('heroLight')
         navContact.classList.toggle('lightHomeBtn')
         homeContact.classList.toggle('lightHomeBtn')
@@ -41,4 +39,10 @@ const toggleDarkMode = () =>{
         }
         mode = 'dark';
     }
+}
+
+
+const toggleMenu = () =>{
+    const menu = document.querySelector('.nav-links')
+    menu.classList.toggle('show-menu')
 }

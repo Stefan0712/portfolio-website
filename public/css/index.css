@@ -898,6 +898,9 @@ footer .copyright{
         align-items: center;
         justify-content: center;
     }
+    .heroLight{
+        background-image: none !important;
+    }
     
 
 

@@ -121,7 +121,7 @@ body::-webkit-scrollbar{
         border: 1px solid transparent;
         border-radius: 5px;
         margin-left: auto;
-        margin-right: 100px;
+        margin-right: 0px;
         transition: all 0.2s;
     }
     #nav-contact-btn:hover{
@@ -220,7 +220,7 @@ body::-webkit-scrollbar{
         align-items: center;
         justify-content: flex-end;
         width: 100px;
-        height: 50vh;
+        height: 100vh;
         position: absolute;
         left: 0px;
         bottom: 0px;
@@ -283,24 +283,32 @@ body::-webkit-scrollbar{
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
     .line{
         height: calc(50% - 50px);
         width: 5px;
         background-color: var(--el);
     }
+   
+        
+   
     .left-header, .right-header{
         display: flex;
         flex-direction: column;
         align-items: center;
         position: absolute;
-        
+        text-decoration: none;
         bottom: 0px;
         height: 100%;
         width: 100px;
     }
     .left-header{
         left: 0px;
+       
+    }
+    .header a{
+        text-decoration: none;
     }
     .right-header{
         right: 0px;
@@ -475,6 +483,10 @@ body::-webkit-scrollbar{
         flex-direction: column;
         
     }
+    .portfolio-content a{
+        text-decoration: none;
+        color: var(--el);
+    }
     .portfolio-text{
         display: flex;
         flex-direction: column;
@@ -507,7 +519,7 @@ body::-webkit-scrollbar{
         visibility: hidden;
     }
     .project-container{
-        width: 30%;
+        width: 350px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -516,7 +528,10 @@ body::-webkit-scrollbar{
         cursor: pointer;
         
     }
- 
+    .project-container a{
+        height: 100%;
+        width: 100%;
+    }
     
     .project-details{
         position: absolute;
@@ -527,7 +542,7 @@ body::-webkit-scrollbar{
         transform: translateY(100%);
         transition: all 0.3s;
         padding: 0px 15px 15px 15px;
-        font-size: auto;
+        font-size: 10px;
 
     }
     .project-details::-webkit-scrollbar{
@@ -967,6 +982,10 @@ body::-webkit-scrollbar{
         width: 95vw;
         padding-top: 50px;
     }
+    .portfolio-projects{
+        gap: 30px;
+        width: 95vw;
+    }
     .project-container{
         width: 100%;
         height: 200px;
@@ -1088,7 +1107,7 @@ body::-webkit-scrollbar{
     }
 
 }
-@media only screen and (min-width: 300px) {
-
+@media only screen and (max-width: 510px) {
+    
 
 }

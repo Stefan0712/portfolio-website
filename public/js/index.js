@@ -7,8 +7,8 @@ const hero = document.querySelector('.welcome-section');
 const btn = document.getElementById('btn-dot')
 const navContact = document.getElementById('nav-contact-btn')
 const homeContact = document.getElementById('home-contact')
-
-const toggleDarkMode = () =>{
+const mobileBtn = document.querySelector('.mobile-btn')
+const toggleDarkMode = (type) =>{
     if(mode==='dark'){
         btn.classList.toggle('activeDarkModeBtn')
         r.style.setProperty('--primary','#FBFBFB')
@@ -23,6 +23,9 @@ const toggleDarkMode = () =>{
             icons[i].classList.toggle('darkIcon')
         }
         mode = 'light';
+        if(type==='mobile'){
+            mobileBtn.textContent = "Dark Mode"
+        }
 
     }else if(mode==='light'){
         btn.classList.toggle('activeDarkModeBtn')

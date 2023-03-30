@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/index.css">
     <script src="./public/js/index.js" defer></script>
+    <meta name="format-detection" content="telephone=no">
     <title>Vladulescu Stefan</title>
 </head>
 
@@ -21,7 +22,7 @@
                 <a href="#about">About</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
-                <button class="mobile-btn" id="darkModeBtn" onClick="toggleDarkMode()"><div id="btn-dot"></div></button>
+                <div class="mobile-btn" id="mobileThemeBtn" onClick="toggleDarkMode('mobile')">Light Mode</div>
             </div>
             
             <a id="nav-contact-btn" href="#contact">Contact me</a>
@@ -29,19 +30,13 @@
             
         </nav>
         <div class="welcome-content">
-            <div class="socials">
-                <img class="social-icon darkIcon icon" src="./public/images/fiverr.png" alt="">
-                <img class="social-icon darkIcon icon" src="./public/images/github.png" alt="">
-                <img class="social-icon darkIcon icon" src="./public/images/instagram.png" alt="">
-                <img class="social-icon darkIcon icon" src="./public/images/linkedin.png" alt="">
-                <div class="socials-line"></div>
-            </div>
+            
             <div class="email">
                 <a href="mailto:s.vladulescu@gmail.com">s.vladulescu@gmail.com</a>
                 <div class="socials-line"></div>
             </div>
             <div class="welcome-text">
-                <div>
+                <div id="name-text">
                     <h1>Hi There!</h1>
                     <div style="display: flex;gap:10px;">
                         <h1>I'm </h1><h1 class="name">Ștefan</h1>
@@ -58,12 +53,19 @@
                     <a id="find-more-btn" href="#about">Find more</a>
                 </div>
             </div>
+            <div class="socials">
+                <img class="social-icon darkIcon icon" src="./public/images/fiverr.png" alt="">
+                <img class="social-icon darkIcon icon" src="./public/images/github.png" alt="">
+                <img class="social-icon darkIcon icon" src="./public/images/instagram.png" alt="">
+                <img class="social-icon darkIcon icon" src="./public/images/linkedin.png" alt="">
+                <div class="socials-line"></div>
+            </div>
         </div>
     </div>
     <div class="section" id="about">
         <div class="left-header header">
             <div class="line" id="line-1"></div>
-            <div class="title">ABOUT</div>
+            <a href="#about"><div class="title">ABOUT</div></a>
             <div class="line" id="line-2"></div>
         </div>
         <div class="right-header header">
@@ -72,6 +74,7 @@
             <div class="line" id="line-2"></div>
         </div>
         <div class="go-back"><a href="#home">GO BACK</a></div>
+        <div class="go-back-mobile"><a href="#home"><img src="./public/images/up-arrow.png" alt=""></a></div>
         <div class="about-content">
             <div class="personal-info">
                 <div class="profile-picture">
@@ -85,8 +88,8 @@
                         <p>+40724 473 060</p>
                     </div>
                     <div class="subtitle">Education</div>
-                    <a href="http://stec-en.univ-ovidius.ro/">Faculty Of Economic Sciences, UOC</a>
-                    <a href="http://colegiuldeltadunarii.ro/">Colegiul Economic "Delta Dunarii" Tulcea</a>
+                    <a href="http://stec-en.univ-ovidius.ro/" target="_blank">Faculty Of Economic Sciences, UOC</a>
+                    <a href="http://colegiuldeltadunarii.ro/" target="_blank">Colegiul Economic "Delta Dunarii" Tulcea</a>
 
                     <div class="subtitle">Other skills</div>
                     <div class="other-skills">
@@ -162,7 +165,7 @@
     <div class="section" id="portfolio">
         <div class="left-header header">
             <div class="line" id="line-1"></div>
-            <div class="title">PROJECTS</div>
+            <a href="#portfolio"><div class="title">PROJECTS</div></a> 
             <div class="line" id="line-2"></div>
         </div>
         <div class="right-header header">
@@ -171,6 +174,7 @@
             <div class="line" id="line-2"></div>
         </div>
         <div class="go-back"><a href="#about">GO BACK</a></div>
+        <div class="go-back-mobile"><a href="#home"><img src="./public/images/up-arrow.png" alt=""></a></div>
         <div class="portfolio-content">
             <div class="portfolio-text">
                 <h1>Portfolio</h1>
@@ -179,6 +183,7 @@
             <div class="portfolio-projects">
                 <div class="project-container">
                     <img class="project-img" src="./public/images/yelp-camp.png" alt="">
+                    <h1 class="project-title-mobile">YelpCamp</h1>
                     <div class="project-details">
                         <h1>YelpCamp</h1>
                         <p>A simple copy of YelpCamp with all the basic CRUD functionality, auth and some basic security. Styles with Bootstrap and built with Express
@@ -186,13 +191,11 @@
                         </p>
                         <a href="https://yelpcamp-c2ke.onrender.com/">Live preview</a>
                     </div>
-                    <div class="mobile-desc">
-                        <h3>YelpCamp</h3>
-                        <p>A copy of YelpCamp. Basic CRUD. Bootstrap, Express, MongoDB</p>
-                    </div>
+                   
                 </div>
                 <div class="project-container">
                     <img class="project-img" src="./public/images/project-default.jpg" alt="">
+                    <h1 class="project-title-mobile">Flowershop</h1>
                     <div class="project-details">
                         <h1>Flowershop</h1>
                         <p>A simple mockup of a presentation website for a flower shop. It has a very simple 3 images carousel and a home, products, about and contact page.
@@ -200,26 +203,22 @@
                         </p>
                         <a href="#">Live preview</a>
                     </div>
-                    <div class="mobile-desc">
-                        <h3>YelpCamp</h3>
-                        <p>A copy of YelpCamp. Basic CRUD. Bootstrap, Express, MongoDB</p>
-                    </div>
+                    
                 </div>
                 <div class="project-container">
                     <img class="project-img" src="./public/images/project-default.jpg" alt="">
+                    <h1 class="project-title-mobile">Restaurant</h1>
                     <div class="project-details">
                         <h1>Restaurant</h1>
                         <p>A mockup for a shushi restaurant. It has a home, menu, about and contact page.
                         </p>
                         <a href="#">Live preview</a>
                     </div>
-                    <div class="mobile-desc">
-                        <h3>YelpCamp</h3>
-                        <p>A copy of YelpCamp. Basic CRUD. Bootstrap, Express, MongoDB</p>
-                    </div>
+                    
                 </div>
                 <div class="project-container">
                     <img class="project-img" src="./public/images/project-default.jpg" alt="">
+                    <h1 class="project-title-mobile">CoffeeShop</h1>
                     <div class="project-details">
                         <h1>CoffeeShop</h1>
                         <p>
@@ -227,26 +226,12 @@
                         </p>
                         <a href="#">Live preview</a>
                     </div>
-                    <div class="mobile-desc">
-                        <h3>YelpCamp</h3>
-                        <p>A copy of YelpCamp. Basic CRUD. Bootstrap, Express, MongoDB</p>
-                    </div>
+                    
                 </div>
+                
                 <div class="project-container">
                     <img class="project-img" src="./public/images/project-default.jpg" alt="">
-                    <div class="project-details">
-                        <h1>Service Based Business</h1>
-                        <p>The perfect website for a business to showcase their services and prices. It also has all the basic other pages, like about and contact pages.
-                        </p>
-                        <a href="#">Live preview</a>
-                    </div>
-                    <div class="mobile-desc">
-                        <h3>YelpCamp</h3>
-                        <p>A copy of YelpCamp. Basic CRUD. Bootstrap, Express, MongoDB</p>
-                    </div>
-                </div>
-                <div class="project-container">
-                    <img class="project-img" src="./public/images/project-default.jpg" alt="">
+                    <h1 class="project-title-mobile">Personal Project</h1>
                     <div class="project-details">
                         <h1>Personal Project</h1>
                         <p>
@@ -254,10 +239,7 @@
                         </p>
                         <a href="#">Live preview</a>
                     </div>
-                    <div class="mobile-desc">
-                        <h3>YelpCamp</h3>
-                        <p>A copy of YelpCamp. Basic CRUD. Bootstrap, Express, MongoDB</p>
-                    </div>
+                   
                 </div>
                 
             </div>
@@ -283,6 +265,7 @@
             <div class="line" id="line-2"></div>
         </div>
         <div class="go-back"><a href="#portfolio">GO BACK</a></div>
+        <div class="go-back-mobile"><a href="#home"><img src="./public/images/up-arrow.png" alt=""></a></div>
         <h1 class="contact-title">CONTACT ME</h1>
         <div class="contact-content">
             <div class="contact-me">
@@ -314,10 +297,10 @@
             </div>
         </div>
         <div class="contact-socials">
-            <a href="instagram.com"><img class="social-icon darkIcon icon" src="./public/images/instagram.png" alt=""><p>Instagram</p></a>
-            <a href="github.com"><img class="social-icon darkIcon icon" src="./public/images/github.png" alt=""><p>Github</p></a>
-            <a href="fiverr.com"><img class="social-icon darkIcon icon" src="./public/images/fiverr.png" alt=""><p>Fiverr</p></a>
-            <a href="linkedin.com"><img class="social-icon darkIcon icon" src="./public/images/linkedin.png" alt=""><p>Linkedin</p></a>
+            <a href="instagram.com" target="_blank"><img class="social-icon darkIcon icon" src="./public/images/instagram.png" alt=""><p>Instagram</p></a>
+            <a href="github.com" target="_blank"><img class="social-icon darkIcon icon" src="./public/images/github.png" alt=""><p>Github</p></a>
+            <a href="fiverr.com" target="_blank"><img class="social-icon darkIcon icon" src="./public/images/fiverr.png" alt=""><p>Fiverr</p></a>
+            <a href="https://linkedin.com" target="_blank"><img class="social-icon darkIcon icon" src="./public/images/linkedin.png" alt=""><p>Linkedin</p></a>
         </div>
 
         <div class="go-to-top">

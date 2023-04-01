@@ -288,18 +288,18 @@
             </div>
             <div class="contact-form">
                 <h1>SEND ME A MESSAGE</h1>
-                <form>
+                <form method="POST" action="https://formspree.io/f/xayzpbkv">
                     <div>
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name">
+                        <input type="text" name="last-name" id="last-name" required>
                     </div>
                     <div>
                         <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div>
                         <label for="message">MESSAGE</label>
-                        <input type="text" name="message" id="message">
+                        <input type="text" name="message" id="message" required>
                     </div>
                     <button id="contact-form-btn">SEND</button>
                 </form>

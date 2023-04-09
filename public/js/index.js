@@ -8,6 +8,7 @@ const btn = document.getElementById('btn-dot')
 const navContact = document.getElementById('nav-contact-btn')
 const homeContact = document.getElementById('home-contact')
 const mobileBtn = document.querySelector('.mobile-btn')
+const easterEgg = document.querySelector('.easter-egg')
 const toggleDarkMode = (type) =>{
     if(mode==='dark'){
         btn.classList.toggle('activeDarkModeBtn')
@@ -48,4 +49,19 @@ const toggleDarkMode = (type) =>{
 const toggleMenu = () =>{
     const menu = document.querySelector('.nav-links')
     menu.classList.toggle('show-menu')
+}
+let sound = null;
+const activateEasterEgg = () =>{
+    easterEgg.classList.add('active-easter-egg')
+    if(sound && !sound.paused){
+        sound.pause()
+    }
+    sound = new Audio('./public/easterEggSound.mp3');
+    sound.preload = "auto";
+    sound.volume = 0.2;
+    sound.play();
+    setTimeout(()=>{
+        easterEgg.classList.remove('active-easter-egg')
+        
+    }, 10000)
 }

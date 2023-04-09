@@ -344,6 +344,32 @@ body::-webkit-scrollbar{
         position: relative;
         align-items: center;
     }
+    .easter-egg img{
+        filter: invert(0%) !important;
+    }
+    .easter-egg{
+        position: absolute;
+        right: 20px;
+        top: 0px;
+        
+    }
+    .active-easter-egg{
+        animation: 1s infinite linear easterEggAnimation;
+    }
+    @keyframes easterEggAnimation {
+        0% { transform: rotate(-10deg) scale(1.2); }
+        10% { transform: rotate(10deg) scale(1.2); }
+        20% { transform: rotate(-10deg) scale(1.2); }
+        30% { transform: rotate(10deg) scale(1.2); }
+        40% { transform: rotate(-10deg) scale(1.2); }
+        50% { transform: rotate(10deg) scale(1.2); }
+        60% { transform: rotate(-10deg) scale(1.2); }
+        70% { transform: rotate(10deg) scale(1.2); }
+        80% { transform: rotate(-10deg) scale(1.2); }
+        90% { transform: rotate(10deg) scale(1.2); }
+        100% { transform: rotate(0) scale(1); }
+
+    }
     .about-content{
         width: 80%;
         height: 80%;
@@ -356,6 +382,7 @@ body::-webkit-scrollbar{
         border-right: 1px solid var(--el);
         padding-right: 30px;
         height: 100%;
+        
     }
     .profile-picture{
         height: 250px;
@@ -363,6 +390,7 @@ body::-webkit-scrollbar{
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
     .profile-picture img{
         height: 95%;

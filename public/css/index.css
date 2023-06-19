@@ -434,6 +434,7 @@ body::-webkit-scrollbar{
     }
     .about-me p{
         font-size: 1.3rem;
+        text-align: justify;
     }
 
 
@@ -533,9 +534,7 @@ body::-webkit-scrollbar{
         gap: 15px;
         justify-content: center;
     }
-    .project-title-mobile{
-        display: none;
-    }
+ 
     .mobile-btn{
         display: none !important;
         margin: 25px;
@@ -546,57 +545,38 @@ body::-webkit-scrollbar{
     .portfolio-projects::-webkit-scrollbar{
         visibility: hidden;
     }
-    .project-container{
+    .project{
         width: 350px;
-        height: auto;
+        height: 200px;
         display: flex;
         flex-direction: column;
         overflow: hidden;
         position: relative;
         cursor: pointer;
-        
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all 0.2s;
     }
-    .project-container a{
-        height: 100%;
-        width: 100%;
+    .project:hover{
+        transition: all 0.2s;
+    }
+    #yelpcamp:hover{
+        background-image: url('../images/yelpcamp-content.png') !important;
+    }
+    #flowershop:hover{
+        background-image: url('../images/flowershop-content.png') !important;
+    }
+    #restaurant:hover{
+        background-image: url('../images/restaurant-content.png') !important;
+    }
+    #coffeeshop:hover{
+        background-image: url('../images/coffeeshop-content.jpg') !important;
+    }
+    #blog:hover{
+        background-image: url('../images/blog-content.png') !important;
     }
     
-    .project-details{
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        display: flex;
-        flex-direction: column;
-        transform: translateY(100%);
-        transition: all 0.3s;
-        padding: 0px 15px 15px 15px;
-        font-size: 10px;
-
-    }
-    .project-details::-webkit-scrollbar{
-        visibility: hidden;
-    }
-    .project-details a{
-        color: var(--accent);
-        text-decoration: none;
-    }
-    .project-details a:hover{
-        text-decoration: underline;
-        color: var(--accent);
-    }
-    .project-container:hover .project-details{
-        transition: all 0.2s;
-        transform: translateY(0%);
-        background-color: rgba(12, 10, 10, 0.425); 
-        color: white;
-        padding: 15px;
-        font-size: 15px;
-    }
-
-    .project-img{
-        height: 100%;
-        width: 100%;
-    }
 
 
 
@@ -1020,33 +1000,9 @@ body::-webkit-scrollbar{
         gap: 30px;
         width: 95vw;
     }
-    .project-container{
+    .project{
         width: 100%;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-position: center;
-    }
-    .project-title-mobile{
-        display: block;
-        font-size: 1.5rem;
-        background-color: #1a1617a2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        color: var(--homeBtnText);
-    }
-   
-    .project-img{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
+        
     }
    .portfolio-text{
     display: none;
@@ -1141,8 +1097,3 @@ body::-webkit-scrollbar{
     }
 
 }
-@media only screen and (max-width: 510px) {
-    
-
-}
-

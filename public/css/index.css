@@ -568,7 +568,7 @@ body::-webkit-scrollbar{
         background-image: url('../images/flowershop-content.png') !important;
     }
     #restaurant:hover{
-        background-image: url('../images/restaurant-content.png') !important;
+        background-image: url('../images/inProgress.png') !important;
     }
     #coffeeshop:hover{
         background-image: url('../images/coffeeshop-content.jpg') !important;
